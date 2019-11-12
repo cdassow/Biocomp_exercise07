@@ -19,3 +19,9 @@ NumbSequence <-function(iris, species){
 }
 NumbSequence(iris, setosa)
 # Output should be 50 for each one
+
+
+greater_than_width<-function(x){
+  width<-iris[iris$Sepal.Width>x,]
+  return(width)
+}
