@@ -38,15 +38,11 @@ bigger_sepal <- function(x){
 ########################################
 
 #MOVE GIVEN SPECIES TO CSV
+#Usage: export_species(iris, "setosa")
 
-export_species <- function(x){
-  for (species in iris)
-    {if (x == "setosa")
-      {y <- iris[1:50,]}
-    else if (x == "versicolor")
-      {y <- iris[51:100,]}
-    else (x == "virginica")
-      {y <-  iris[101:150,]}
-  }
-  write.csv(y, file = y.csv)
+export_species <- function(x, c){
+  y <- x[x[,5] == c,]
+  write.csv(y, paste(c, ".csv"))
+  return(y)
 }
+  
