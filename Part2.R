@@ -1,16 +1,14 @@
 iris<-read.csv("./Biocomp_exercise07/iris.csv")
 
 #number of observations for a given species
-spec<- iris$Species
-observations<-function(subSet, species_name){
-  list(a = df, b=sub, c=species_name)
-  dat<-length(subSet[subSet == "c"])
+spec<-"setosa"
+observations<-function(subSet){
+  dat<-sum(na.omit(subSet)==spec)
   return(dat)
 }
+observations(iris$Species)
 
-observations(spec, virginica)
-
-       #flowers with Sepal.Width>given number
+#flowers with Sepal.Width>given number
 sepalWidth<-function(df, num){
   width<-df[which(df[,2]>num),]
   return(width)
@@ -27,5 +25,5 @@ speciesData<-function(df, sub, species_name){
   write.csv(dat, file = name)
 }
 
-
+speciesData(iris, Species)
 
