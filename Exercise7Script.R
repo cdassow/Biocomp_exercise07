@@ -3,7 +3,7 @@ setwd("~/Desktop/biocomp-shell/Biocomp_exercise07/")
 iris <- read.csv("iris.csv")
 
 #Question 1: Return odd number of rows from a given file
-#Usage: returnodd(x=.csv file)
+#Usage: returnodd(x=dataframe)
 returnodd <- function(x){
   rowcount = nrow(x)
   seq = seq.int(1, rowcount, 2)
@@ -13,10 +13,10 @@ returnodd <- function(x){
 }
 
 returnodd(x=iris)
+returnodd(x=wages)
 
-
-#Question 2: Return the number of a given species in the dataset
-#Usage: returnspecies(dataframe you are using, species="species of interest")
+#Question 2: Return the number of obsrevatins for a given species in the dataset
+#Usage: returnspecies(dataframe= dataframe you are using, species="species of interest")
 returnspecies <- function(dataframe, species){
   species = sum(dataframe$Species == species)
   
@@ -30,7 +30,7 @@ returnspecies(dataframe = iris, species = "versicolor")
 
 
 #Question 2: Return dataframe for flowers with Sepal.width greater than a value specified by function user
-#Usage: returnsepal(dataframe you are using, threshold = # that you want Sepal.width to be greater than)
+#Usage: returnsepal(dataframe= dataframe you are using, threshold = # that you want Sepal.width to be greater than)
 sepalwidth <- function(dataframe, threshold){
   fatsepals <- dataframe[dataframe$Sepal.Width > threshold,]
   
