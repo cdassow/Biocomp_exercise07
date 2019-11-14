@@ -20,8 +20,17 @@ NumbSequence <-function(iris, species){
 NumbSequence(iris, setosa)
 # Output should be 50 for each one
 
-
+#To find the individuals with a sepal width greater than x
 greater_than_width<-function(x){
   width<-iris[iris$Sepal.Width>x,]
   return(width)
 }
+
+#To create a .csv file of a specified species
+speciesFile<-function(iris, speciesName){
+  species<-iris[iris$Species==speciesName,]
+  x<-paste(speciesName,".csv",sep="")
+  write.csv(species, file = x)
+}
+#Example: To create the file versicolor.csv with the data from iris.csv that only contains the data for versicolor species
+speciesFile(iris, "versicolor")
