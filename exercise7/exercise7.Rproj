@@ -1,0 +1,57 @@
+oddnumber <- function(x){
+  x1 <- read.csv(x)
+  counter <- 0
+  for (row in x1) {
+    counter <- counter + 1
+    if (counter %% 2 == 0){
+      print(row)
+    }
+  }
+oddnumber("../iris.csv")
+
+
+#odd <- x1[x1 % 2 != 0,]
+#return(odd)
+oddnumber1 <- function(x){
+  x2 <- read.csv(x)
+  for (row in x2){
+     odd <- x2[x2 %% 2 == 0,]
+  }
+oddnumber <- function(x){
+  x1 <- read.csv(x)
+  counter <- 0
+  for (row in x1) {
+    counter<- counter + 1
+    if (counter1%% 2 == 0){
+      print(row)
+    }
+  }
+}
+oddnumber("../iris.csv")
+oddnumber1<- function(x){
+  x1 <- read.csv(x)
+  counter <- 0
+  for (row in x1) {
+    counter<- counter + 1
+    print(counter)
+  }
+}
+
+oddnumber <- function(x){
+  x1 <- read.csv(x)
+  counter <- 0
+  for (rows in x1) {
+    counter <- counter + 1
+    print(rows)
+  }
+      
+      
+    
+
+
+  
+
+    
+
+  
+    
